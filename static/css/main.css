@@ -1,0 +1,16 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.0/mini-default.min.css");
+
+:root {
+  --a-link-color: black;
+  --a-visited-color: black;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: none;
+  color: gray;
+}
