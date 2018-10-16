@@ -13,7 +13,7 @@ COPY Gopkg.toml Gopkg.lock ./
 RUN dep ensure --vendor-only
 # add source code
 COPY . ./
-# build main.go
+# build app.go
 RUN go build ./app.go
 # run the binary
 CMD ["./app"]
