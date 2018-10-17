@@ -5,6 +5,8 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/phaicom/golang-docker-example/mocks"
+
 	"github.com/phaicom/golang-docker-example/handlers"
 	"github.com/phaicom/golang-docker-example/middleware"
 
@@ -28,6 +30,9 @@ func main() {
 
 	// Middleware
 	http.Handle("/", middleware.PanicRecoveryHandler(ghandlers.LoggingHandler(os.Stdout, r)))
+
+	// mock data
+	mocks.CreateJson()
 
 	log.Fatal(http.ListenAndServe(":8080", r))
 }
